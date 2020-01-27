@@ -9,14 +9,30 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    color: hsl(234, 12%, 34%);
 }
 
 h1,h2 {
     text-align: center;
 }
-
+section {
+    padding: 4rem 0;
+}
 .section__title {
     font-weight: 200;
     font-size: 2rem;
-    color: hsl(234, 12%, 34%);
+}
+
+.section__subtitle {
+    font-size: 2rem;
+}
+.section__description {
+    width: 33%;
+    margin: 1rem auto;
+    text-align: center;
+    font-weight: 200;
+}
+
+.card {
+    
 }
