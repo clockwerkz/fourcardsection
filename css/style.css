@@ -2,14 +2,14 @@
 
 * {
     margin: 0;
-    padding: 0;
-    font-size: 15px;
-    background-color: hsl(0, 0%, 98%);
+    padding: 0;  
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     color: hsl(234, 12%, 34%);
+    font-size: 15px;
+    background-color: hsl(0, 0%, 98%);
 }
 
 h1,h2 {
@@ -27,12 +27,42 @@ section {
     font-size: 2rem;
 }
 .section__description {
-    width: 33%;
+    width: 36%;
     margin: 1rem auto;
     text-align: center;
     font-weight: 200;
 }
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.cards__vertical {
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+}
 .card {
-    
+    width: 350px;
+    margin: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card__inner {
+    background-color: white;
+    min-height: 175px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid salmon;
+}
+
+.card__img {
+    width: 50px;
+    height: auto;
+    align-self: flex-end;
+    margin-top: auto;
 }
