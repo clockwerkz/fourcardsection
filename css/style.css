@@ -16,19 +16,20 @@ h1,h2 {
     text-align: center;
 }
 section {
-    padding: 4rem 0;
+    padding: 4rem 0 1rem;
 }
 .section__title {
     font-weight: 200;
-    font-size: 2rem;
+    font-size: 2.25rem;
 }
 
 .section__subtitle {
-    font-size: 2rem;
+    font-size: 2.25rem;
 }
 .section__description {
-    width: 36%;
-    margin: 1rem auto;
+    width: 40%;
+    font-size: 1.10rem;
+    margin: 1rem auto 2.4rem;
     text-align: center;
     font-weight: 200;
 }
@@ -41,22 +42,26 @@ section {
 .cards__vertical {
     display: flex;
     flex-direction: column;
-   
     align-items: center;
+    flex-shrink: 1;
 }
 .card {
-    width: 350px;
+    max-width: 350px;
     margin: 1rem;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 2px 8px 15px 2px hsla(219, 75%, 68%, 0.288);
+    box-shadow: 2px 8px 15px 2px hsla(219, 75%, 68%, 0.219);
+    flex-shrink: 1;
 }
 
+.card:nth-child(3) {
+    margin-top: 2rem;
+}
 
 .card__inner {
     background-color: white;
     min-height: 175px;
-    padding: 1.75rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -78,24 +83,93 @@ section {
 }
 .card__title {
     margin: 0 0 0.75rem 0;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 .card__description {
+    font-size: 0.8rem;
+    padding-right: 2rem;
+    line-height: 1rem;
     color: hsl(229, 6%, 66%);
+    margin-bottom: 3rem;
 }
 .card__img {
-    width: 50px;
+    width: 65px;
     height: auto;
     align-self: flex-end;
-    margin-top: auto;
+    margin: auto .5rem 0.8rem 0; 
+}
+
+footer {
+    padding: 2rem 0 .5rem;
+    color: hsl(229, 6%, 66%);
+}
+
+footer br{
+    display: none;
+}
+.attribution {
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: hsl(234, 12%, 34%);
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+    .section__description {
+        width: 80%;
+    }
+
+    .card {
+        margin: .5rem;
+        min-width: 40%;
+    }
+    .card:nth-child(3) {
+        margin-top: 0rem;
+    }
+    .cards {
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .cards__vertical {
+        align-self: flex-end;
+        flex-direction: row;
+        justify-content: center;
+        order: 2;
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 375px) {
+    body {
+        background-color: white;
+        padding: .25rem;
+    }
     .section__title {
         font-size: 1.8rem;
     }   
 
     .section__subtitle {
         font-size: 1.8rem;
+    }
+
+    .section__description {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    .card {
+        box-shadow: 2px 8px 15px 2px hsla(188, 29%, 63%, 0.288);
+        margin: 1rem 0;
+    }
+
+    footer br {
+        display: block;
     }
 }
