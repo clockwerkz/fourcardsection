@@ -89,3 +89,13 @@ section {
     align-self: flex-end;
     margin-top: auto;
 }
+
+@media screen and (max-width: 375px) {
+    .section__title {
+        font-size: 1.8rem;
+    }   
+
+    .section__subtitle {
+        font-size: 1.8rem;
+    }
+}
